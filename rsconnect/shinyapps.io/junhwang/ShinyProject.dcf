@@ -1,0 +1,13 @@
+name: ShinyProject
+title: ShinyProject
+username:
+account: junhwang
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4434393
+bundleId: 4866292
+url: https://junhwang.shinyapps.io/ShinyProject/
+when: 1627511810.52605
+lastSyncTime: 1627511810.52606
+asMultiple: FALSE
+asStatic: FALSE

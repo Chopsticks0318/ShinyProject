@@ -1,7 +1,7 @@
 ---
 title: "Course Project: Shiny Application and Reproducible Pitch"
-author: "Ben Karmay"
-date: "06/12/2017"
+author: "Jun Hwang"
+date: "July 29. 2021"
 output: ioslides_presentation
 ---
 
@@ -9,38 +9,36 @@ output: ioslides_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Diamond Analysis Report
+## Gold Analysis Report
 
-Diamond Data Analysis Report enabled developing data products using shiny apps being embeded within RMarkDown.
+Gold Data Analysis Report enabled developing data products using shiny apps being embeded within RMarkDown.
 
 Using PageUp and PageDown keys all the slides can be traversed.
 
 ## Application Overview
 
-- Diamonds Properties can be analysed using several Parameters.
+- Golds Properties can be analysed using several Parameters.
 - Carat,Price,sample size,color Depth are some of the common parameters.
-- This Report enables to pick the right parameters for the best Diamond selection.
+- This Report enables to pick the right parameters for the best gold selection.
 
 
 ## Slide with Complete Reporting Appliaction
 
 Click the Below Link for the Application.
 
-https://bkarmay.shinyapps.io/PricePredictorForDiamonds/
+ https://junhwang.shinyapps.io/ShinyProject/
 
 Click the link below for compiled project files on gitub repo.
 
-https://github.com/BenKarmay/Peer-graded-Assignment-Course-Project-Shiny-Application-and-Reproducible-Pitch
+https://github.com/Chopsticks0318/ShinyProject
 
 ## Data Used
-The data used for this application is diamonds data set, which is part of ggplot2 package. Containing information about 53940 diamonds with 10 variables.
+The data used for this application is gold data set, which contains information about 53940 golds with 10 variables.
 
-```{r, echo=TRUE}
+```{r, echo=FALSE}
 library("ggplot2")
 head(diamonds)
 ```
-
-
 
 
 

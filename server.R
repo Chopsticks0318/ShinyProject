@@ -1,16 +1,14 @@
-
-
 library(shiny)
 library(ggplot2)
 library(dplyr)
 library(rsconnect)
 # Select columns to be used in the analysis
-gold <- golds[,c(1:4,7)]
+gold <- diamonds[,c(1:4,7)]
 # Define server logic required to draw a plot
 shinyServer(function(input, output) {
         output$distPlot <- renderPlot({
                 # Select golds depending of user input
-                gold <- filter(golds, grepl(input$cut, cut), grepl(input$col, color), grepl(input$clar, clarity))
+                gold <- filter(diamonds, grepl(input$cut, cut), grepl(input$col, color), grepl(input$clar, clarity))
                 # build linear regression model
                 fit <- lm( price~carat, gold)
                 # predicts the price
@@ -28,7 +26,7 @@ shinyServer(function(input, output) {
         })
         output$result <- renderText({
                 # Renders the text for the prediction below the graph
-                gold <- filter(golds, grepl(input$cut, cut), grepl(input$col, color), grepl(input$clar, clarity))
+                gold <- filter(diamonds, grepl(input$cut, cut), grepl(input$col, color), grepl(input$clar, clarity))
                 fit <- lm( price~carat, gold)
                 pred <- predict(fit, newdata = data.frame(carat = input$car,
                                                           cut = input$cut,
